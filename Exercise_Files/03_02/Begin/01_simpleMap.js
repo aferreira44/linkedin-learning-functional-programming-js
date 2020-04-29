@@ -1,10 +1,10 @@
 // Learning Functional Programming with Javascript
 // Chapter 03, Video 02, Exercise 01
+var _ = require("lodash");
 
-var numbers = [ 1, 2, 3, 4, 5 ]
-var numbersCubed = [ ]
+var cube = (x) => x * x * x;
 
-for(var i = 0; i < numbers.length; i++) {
-  var element = numbers[i]
-  numbersCubed.push(element * element * element)
-}
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var numbersCubed = _.map(numbers, (el) => cube(el));
+
+console.log(numbersCubed);
